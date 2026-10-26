@@ -53,28 +53,6 @@ NAV_ITEMS = [
     },
 ]
 
-PERMISSIONS = [
-    {"code": "elm.leave.view_self", "label": "View own leave balances and requests"},
-    {"code": "elm.leave.apply", "label": "Apply for leave and nominate substitute"},
-    {"code": "elm.leave.substitute", "label": "Accept or decline substitute requests"},
-    {"code": "elm.leave.approve", "label": "Review, recommend, and sanction leaves"},
-]
+PERMISSIONS = [('elm.leave.view_self', 'View own leave balances and requests'), ('elm.leave.apply', 'Apply for leave and nominate substitute'), ('elm.leave.substitute', 'Accept or decline substitute requests'), ('elm.leave.approve', 'Review, recommend, and sanction leaves')]
 
-ROLE_GRANTS = [
-    {
-        "role": "faculty",
-        "permissions": ["elm.leave.view_self", "elm.leave.apply", "elm.leave.substitute"],
-    },
-    {
-        "role": "staff",
-        "permissions": ["elm.leave.view_self", "elm.leave.apply", "elm.leave.substitute"],
-    },
-    {
-        "role": "unit_head",
-        "permissions": ["elm.leave.view_self", "elm.leave.apply", "elm.leave.substitute", "elm.leave.approve"],
-    },
-    {
-        "role": "admin",
-        "permissions": ["elm.leave.view_self", "elm.leave.apply", "elm.leave.substitute", "elm.leave.approve"],
-    },
-]
+ROLE_GRANTS = {'faculty': ['elm.leave.view_self', 'elm.leave.apply', 'elm.leave.substitute'], 'staff': ['elm.leave.view_self', 'elm.leave.apply', 'elm.leave.substitute'], 'unit_head': ['elm.leave.view_self', 'elm.leave.apply', 'elm.leave.substitute', 'elm.leave.approve'], 'admin': ['elm.leave.view_self', 'elm.leave.apply', 'elm.leave.substitute', 'elm.leave.approve']}

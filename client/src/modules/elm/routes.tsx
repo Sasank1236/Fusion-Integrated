@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import { lazy } from "react";
 import type { RouteObject } from "react-router-dom";
 
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -12,5 +12,17 @@ export const routes: RouteObject[] = [
   {
     path: "apply",
     element: <ApplyLeave />,
+  },
+  {
+    path: "requests",
+    element: <Dashboard />,
+  },
+  {
+    path: "substitute",
+    element: <Dashboard />,
+  },
+  {
+    path: "approvals",
+    element: <Dashboard />,
   },
 ];

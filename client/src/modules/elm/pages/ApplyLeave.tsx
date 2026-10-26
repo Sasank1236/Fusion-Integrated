@@ -7,7 +7,7 @@ export default function ApplyLeave() {
   const [endDate, setEndDate] = useState("");
   const [purpose, setPurpose] = useState("");
   const [isHalfDay, setIsHalfDay] = useState(false);
-  const [halfDayPeriod, setHalfDayPeriod] = useState("FIRST_HALF");
+  const [halfDayPeriod] = useState("FIRST_HALF");
   const [isStationLeave, setIsStationLeave] = useState(false);
   const [stationDetails, setStationDetails] = useState("");
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);

@@ -1,5 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { fetchBalances, fetchRequests, LeaveBalance, LeaveRequest } from "../api/client";
+// import React, { useEffect, useState } from "react";
+// import { fetchBalances, fetchRequests, LeaveBalance, LeaveRequest } from "../api/client";
+
+import { useEffect, useState } from "react";
+import { fetchBalances, fetchRequests } from "../api/client";
+import type { LeaveBalance, LeaveRequest } from "../api/client";
+
 
 export default function LeaveDashboard() {
   const [balances, setBalances] = useState<LeaveBalance[]>([]);
