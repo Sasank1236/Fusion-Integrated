@@ -21,7 +21,10 @@ class Principal:
     roles: tuple[str, ...]
     permissions: frozenset[str]
     modules: tuple[str, ...]
+    #: Built by the IAM so one sidebar can span every Fusion app.
+    navigation: tuple[dict, ...] = ()
     email: str = ""
+    department: str = ""
 
     # DRF pokes at these on request.user
     is_authenticated: bool = True
@@ -33,6 +36,8 @@ class Principal:
             user_id=s.user_id, username=s.username, display_name=s.display_name,
             kind=s.kind, active_role=s.active_role, roles=s.roles,
             permissions=s.permissions, modules=s.modules, email=s.email,
+            department=s.department,
+            navigation=s.navigation,
         )
 
     def has_permission(self, code: str) -> bool:

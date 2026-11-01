@@ -7,6 +7,18 @@ guards on, and every designation column is one the IAM can grant.
 For the intended taxonomy of modules not yet built, see
 [permission-catalog.md](permission-catalog.md).
 
+## `badms`
+
+| Code | What it allows | Held by |
+|---|---|---|
+| `badms.backup.view` | View authorized backup history | `HoD`, `IT Security Team`, `Super Admin`, `SysAdmin`, `faculty`, `staff`, `student` |
+| `badms.backup.run` | Run a manual database backup | `Super Admin`, `SysAdmin` |
+| `badms.archive.submit` | Submit and track archival requests | `faculty`, `staff`, `student` |
+| `badms.archive.review` | Review archival requests | `HoD` |
+| `badms.archive.classify` | Assign authoritative archival classification | `Super Admin`, `SysAdmin` |
+| `badms.archive.secure` | Complete Sensitive-data encryption and archive creation | `IT Security Team` |
+| `badms.audit.view` | View authorized BADMS audit history | `HoD`, `IT Security Team`, `Super Admin`, `SysAdmin` |
+
 ## `directory`
 
 | Code | What it allows | Held by |
@@ -17,12 +29,12 @@ For the intended taxonomy of modules not yet built, see
 
 | Code | What it allows | Held by |
 |---|---|---|
-| `placement_cell.job_posting.view` | See job postings | `Dean Academic`, `acadadmin`, `placement_chairman`, `placement_coordinator`, `placement_officer`, `student` |
+| `placement_cell.job_posting.view` | See job postings | `Dean Academic`, `placement_chairman`, `placement_coordinator`, `placement_officer`, `student` |
 | `placement_cell.job_posting.manage` | Create and publish postings | `placement_officer` |
-| `placement_cell.application.view` | See all applications | `Dean Academic`, `acadadmin`, `placement_chairman`, `placement_coordinator`, `placement_officer` |
+| `placement_cell.application.view` | See all applications | `Dean Academic`, `placement_chairman`, `placement_coordinator`, `placement_officer` |
 | `placement_cell.application.view_self` | See one's own applications | `student` |
 | `placement_cell.application.create` | Apply to a posting | `student` |
-| `placement_cell.application.review` | Shortlist and reject applications | `acadadmin`, `placement_coordinator`, `placement_officer` |
+| `placement_cell.application.review` | Shortlist and reject applications | `placement_coordinator`, `placement_officer` |
 | `placement_cell.application.delete` | Withdraw an application | `student` |
 | `placement_cell.application.auto_withdraw` | System auto-withdrawal | _service only_ |
 | `placement_cell.interview.schedule` | Schedule interview rounds | `placement_officer` |
@@ -32,9 +44,9 @@ For the intended taxonomy of modules not yet built, see
 | `placement_cell.offer.expire` | System offer expiry | _service only_ |
 | `placement_cell.company.manage` | Register and approve companies | `placement_officer` |
 | `placement_cell.announcement.publish` | Publish announcements | `Dean Academic`, `placement_chairman`, `placement_officer` |
-| `placement_cell.report.view` | See operational reports | `Dean Academic`, `acadadmin`, `placement_chairman`, `placement_coordinator`, `placement_officer` |
+| `placement_cell.report.view` | See operational reports | `Dean Academic`, `placement_chairman`, `placement_coordinator`, `placement_officer` |
 | `placement_cell.registration.debar` | Record conduct incidents and impose placement sanctions | `placement_officer` |
 | `placement_cell.registration.manage` | Approve late registrations and re-registrations | `placement_officer` |
 | `placement_cell.registration.self` | Register yourself for a placement season | `student` |
 | `placement_cell.record.manage` | Record off-campus placements and chase offer letters | `placement_officer` |
-| `placement_cell.academic_directory.view` | Browse every student's declared CPI | `Dean Academic`, `acadadmin`, `placement_chairman`, `placement_coordinator`, `placement_officer` |
+| `placement_cell.academic_directory.view` | Browse every student's declared CPI | `Dean Academic`, `placement_chairman`, `placement_coordinator`, `placement_officer` |
